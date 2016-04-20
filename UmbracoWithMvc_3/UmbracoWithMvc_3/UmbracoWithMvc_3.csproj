@@ -385,6 +385,7 @@
     <Content Include="Config\BaseRestExtensions.config" />
     <Content Include="Config\applications.config" />
     <Content Include="Config\404handlers.config" />
+    <Content Include="Views\BlogOverview.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -399,6 +400,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\BlogPostRepositoryController.cs" />
+    <Compile Include="Models\BlogOverviewModel.cs" />
+    <Compile Include="Models\BlogPostModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

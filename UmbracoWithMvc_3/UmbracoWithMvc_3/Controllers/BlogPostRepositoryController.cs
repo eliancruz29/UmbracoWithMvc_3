@@ -5,14 +5,19 @@ using System.Web;
 using System.Web.Mvc;
 using Umbraco.Web.Models;
 using Umbraco.Web.Mvc;
+using UmbracoWithMvc_3.Models;
 
 namespace UmbracoWithMvc_3.Controllers
 {
     public class BlogPostRepositoryController : RenderMvcController
     {
-        public override ActionResult Index(RenderModel model)
+        public ActionResult BlogOverview(RenderModel model)
         {
-            return base.Index(model);
+            ViewBag.Hello = "Hello World";
+
+            var blogOverviewModel = new BlogOverviewModel(model.Content, Umbraco);
+
+            return Index(new RenderModel(blogOverviewModel));
         }
     }
 }
